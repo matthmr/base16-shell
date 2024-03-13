@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
-theme=$(dirname $0)/scripts/${1:-base16-default-dark.sh}
-if [ -f $theme ]; then
-  # get the color declarations in said theme, assumes there is a block of text that starts with color00= and ends with new line
-  source $theme
-  eval $(awk '/^color00=/,/^$/ {print}' $theme | sed 's/#.*//')
-else
-  printf "No theme file %s found\n" $theme
-fi;
 ansi_mappings=(
   Black
   Red
