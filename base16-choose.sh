@@ -7,4 +7,4 @@ cd "${this_dir}/scripts"
 
 find . -maxdepth 1 -type f |\
   fzfc --prompt "Choose theme: " --height=-100% |\
-  xargs -r "${this_dir}/../base16-apply.sh"
+  xargs -r ../base16-apply.sh
